@@ -19,7 +19,7 @@ const routes: Routes = [
     children: [
       { path: 'lists', component: ListsComponent },
       { path: 'members', component: MemberListsComponent, canActivate: [GuardGuard] },
-      { path: 'member/:id', component: MemberDetailsComponent },
+      { path: 'members/:username', component: MemberDetailsComponent },
       { path: 'messages', component: MessagesComponent },
     ]
   },

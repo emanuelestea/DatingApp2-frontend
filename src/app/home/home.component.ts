@@ -21,15 +21,15 @@ export class HomeComponent implements OnInit {
     this.registerMode = !this.registerMode;
   }
 
-  /*getUsers() {
+  registerEvent(event: boolean) {
+    this.registerMode = event;
+  }
+
+    /*getUsers() {
     this.http.get<any>('https://localhost:5001/api/users').subscribe(
       response => {
         this.users = response;
       }
     )
   }*/
-
-  registerEvent(event: boolean) {
-    this.registerMode = event;
-  }
 }

@@ -11,13 +11,13 @@ import { MemberService } from 'src/app/_services/member.service';
 export class MemberListsComponent implements OnInit {
 
   //members: Member[];
-  memebers$: Observable<Member[]> | undefined;
+  members$: Observable<Member[]> | undefined;
 
   constructor(private memberService: MemberService) { }
 
   ngOnInit(): void {
     //this.loadMember();
-    this.memebers$ = this.memberService.getMembers();
+    this.members$ = this.memberService.getMembers();
   }
 
   /*loadMember() {

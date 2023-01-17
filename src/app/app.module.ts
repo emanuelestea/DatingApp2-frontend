@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //dropdown from angular bootstrap
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -28,6 +28,8 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { TextInputComponent } from './_forms/text-input/text-input.component';
+import { DatePickerComponent } from './_forms/date-picker/date-picker.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
     ServerErrorComponent,
     MemberCardComponent,
     MemberEditComponent,
-    PhotoEditorComponent
+    PhotoEditorComponent,
+    TextInputComponent,
+    DatePickerComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,8 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
